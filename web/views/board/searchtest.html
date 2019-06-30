@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<html>
+<head>
+<title>www.webmadang.net</title>
+<script language="javascript">
+
+function getSelectValue(frm)
+{
+ frm.textValue.value = frm.selectBox.options[frm.selectBox.selectedIndex].text;
+ frm.optionValue.value = frm.selectBox.options[frm.selectBox.selectedIndex].value;
+}
+
+</script>
+</head>
+<body>
+<!-- <form name="form">
+<select name="selectBox" onChange="getSelectValue(this.form);">
+ <option value="option1">웹마당넷1</option>
+ <option value="option2">웹마당넷2</option>
+ <option value="option3">웹마당넷3</option>
+ <option value="option4">웹마당넷4</option>
+</select><br><br>
+텍스트값: <input type="text" name="textValue">&nbsp;&nbsp;
+옵션값: <input type="text" name="optionValue">
+</form> -->
+
+
+<br><br>
+<br><br>
+
+<form name="form" action="/travelduo/bsearch">
+<select name="selectBox2" onChange="getSelectValue(this.form);">
+ <option value="title" name="option">제목</option>
+ <option value="writer" name="option">작성자</option>
+
+</select><br><br>
+텍스트값: <input type="text" name="textValue">&nbsp;&nbsp;
+옵션값: <input type="text" name="optionValue">
+    <input type="submit" value="검색"/>
+</form>
+
+<br>
+<br>
+
+<DIV class='aside_menu' align="center">
+  <FORM name='frm' method='GET' action="/travelduo/bsearch" >
+    <ASIDE style='float: right;'>
+      <SELECT name='col'> <!-- 검색 컬럼 -->
+        <OPTION value='none'>전체 목록</OPTION>
+        <OPTION value='rname'>이름</OPTION>
+        <OPTION value='title'>제목</OPTION>
+        <OPTION value='content'>내용</OPTION>
+        <OPTION value='ost'>OST</OPTION>
+        <OPTION value='title_content'>제목+내용</OPTION>
+      </SELECT>
+      <input type='text' name='word' value='' placeholder="특수문자는 사용할수 없습니다.">
+      <button type='submit'>검색</button>    
+    </ASIDE> 
+  </FORM>
+  <DIV class='menu_line' style='clear: both;'></DIV>
+</DIV>
+
+ <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">제타위키</a>
+    </div>
+    <div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">홈</a></li>
+        <li><a href="#">1번 메뉴</a></li>
+        <li><a href="#">2번 메뉴</a></li> 
+        <li><a href="#">3번 메뉴</a></li> 
+      </ul>
+    </div>
+
+
+</body>
+</html>
